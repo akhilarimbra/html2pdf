@@ -1,0 +1,21 @@
+{
+  "name": "html2pdf",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "debug": "nodemon ./bin/www",
+    "prod": "node --max-old-space-size=8192 ./bin/www",
+    "cluster": "pm2 start bin/www -i max",
+    "clear_cache": "sudo rm -r public/cache && mkdir public/cache"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "html-pdf-node": "^1.0.7",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  }
+}
