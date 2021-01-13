@@ -28,7 +28,7 @@ router.get('/', (req, res, next) => {
     var urlEncoded = encodeURI(url)
     var fileName = urlEncoded.split(':').join('').split('/').join('') + '.pdf'
     var filePath = __dirname.split('routes').join('') + 'public/' + "cache/" + fileName
-    let options = { format: 'A4', printBackground: true }
+    let options = { printBackground: true, width: 720 }
 
     try {
       if (fs.existsSync(filePath)) {
