@@ -27,7 +27,7 @@ router.get('/', (req, res, next) => {
     var url = query.url
     var urlEncoded = encodeURI(url)
     var fileName = urlEncoded.split(':').join('').split('/').join('') + '.pdf'
-    var filePath = __dirname.split('routes').join('') + 'public/' + "cache/" + fileName
+    var filePath = __dirname.split('routes').join('') + 'public/' + fileName
     let options = { printBackground: true, width: 720 }
 
     try {
