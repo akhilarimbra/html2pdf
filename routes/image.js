@@ -18,7 +18,8 @@ router.get("/download", function (req, res, next) {
   try {
     if (fs.existsSync(filePath)) {
       console.log("https://ebt.restaurant/cache/" + fileName)
-
+      
+      // return res.redirect('/images/' + fileName)
       return res.download(filePath)
     } else {
       imageCrawler.capture(url, function (err, url) {

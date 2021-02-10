@@ -22,6 +22,10 @@ var writeFileSync = function (path, buffer, permission) {
   }
 }
 
+router.get('/health', (req, res, next) => {
+	return res.statusCode(200).send('Health OK')
+})
+
 /* GET home page. */
 router.get('/', (req, res, next) => {
   try {
