@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "debug": "nodemon ./bin/www",
     "prod": "node --max-old-space-size=8192 ./bin/www",
-    "cluster": "pm2 start bin/www -i max --node-args='--max_old_space_size=3072' ",
+    "cluster": "pm2 start bin/www -i max",
     "clear_cache": "sudo rm -r public/cache && mkdir public/cache"
   },
   "dependencies": {
